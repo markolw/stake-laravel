@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Message;
+use App\Models\Client;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $messages = Message::with(['client'])->get()->toJson();
+        $users = Client::all()->toJson();
+
+        return view('home', compact('messages', 'users'));
     }
 }

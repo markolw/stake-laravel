@@ -6,6 +6,7 @@ use App\Http\Requests\CreateMessageRequest;
 use App\Http\Requests\UpdateMessageRequest;
 use App\Http\Controllers\AppBaseController;
 use App\Models\Message;
+use App\Models\Client;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
@@ -21,11 +22,11 @@ class MessageController extends AppBaseController
      */
     public function index(Request $request)
     {
-        /** @var Message $messages */
-        $messages = Message::all();
+        $messages = Message::with(['client'])->all()->toJson();
+        $users = Client::all()->all()->toJson();
+        dd($messages, $users);
 
-        return view('admin.messages.index')
-            ->with('messages', $messages);
+        return view('admin.messages.index', compact('messages', 'users'));
     }
 
     /**
