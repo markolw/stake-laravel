@@ -1,0 +1,30 @@
+form .error {
+    color: #ff0000;
+}
+
+.preview_image_wrapper {
+    position: relative;
+}
+
+.preview_image_close {
+    position: absolute;
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+}
+
+.required {
+    color: red;
+}
+
+.flex-clearfix {
+    flex-basis: 100%;
+    height: 0;
+}
+
+/* Override select2 classes */
+.select2-container, .select2-selection--single {
+    height: 38px !important;
+}

@@ -5,3 +5,7 @@
         <p>Home</p>
     </a>
 </li>
+
+<li class="{{ Request::is('admin/messages*') ? 'active' : '' }}">
+    <a href="{{ route('admin.messages.index') }}"><i class="fa fa-edit"></i><span>Messages</span></a>
+</li>

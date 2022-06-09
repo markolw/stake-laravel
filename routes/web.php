@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('messages', App\Http\Controllers\Admin\MessageController::class, ["as" => 'admin', 'only' => ['index']]);
+});
