@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+:root {
+  --main-color: #00aeef;
+}
 body {
   font-size: 14px;
   font-weight: 400;
@@ -16,7 +19,7 @@ body {
 }
 .login-box .card {
   border: none;
-  border-top: 2px solid #00AEEF;
+  border-top: 2px solid var(--main-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
   background-color: #fff;
   border-radius: 3px;
@@ -70,19 +73,19 @@ body {
 }
 [class*="icheck-"] > input:first-child:not(:checked):not(:disabled):hover + label::before {
   border-width: 1px;
-  border-color: #00AEEF;
+  border-color: var(--main-color);
 }
 .icheck-primary > input:first-child:checked + label::before {
-  background-color: #00AEEF;
-  border-color: #00AEEF;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
 }
 [class*="icheck-"] > input:first-child:checked + label::after {
   top: -2px;
   left: -2px;
 }
 .btn-primary {
-  background-color: #00AEEF;
-  border-color: #00AEEF;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
 }
 .btn-primary:hover {
   background-color: #00a0da;
@@ -96,5 +99,16 @@ body {
   height: 42px;
 }
 .form-control:focus {
+  border-color: var(--main-color);;
+}
+.bg-primary {
+  background-color: var(--main-color) !important;
+}
+.btn-primary.focus, .btn-primary:focus, .btn-primary.active, .btn-primary:active, .btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #00a0da;
   border-color: #00a0da;
+}
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active, .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+  background-color: var(--main-color);
+  color: #fff;
 }

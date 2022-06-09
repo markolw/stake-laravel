@@ -1,9 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="{{ route('home') }}" class="brand-link">
-        <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
-             alt="AdminLTE Logo"
-             class="brand-image img-circle elevation-3">
-        <span class="brand-text font-weight-light">{{ config('app.name') }}</span>
+        <img src="{{ asset('/images/mebit-logo.png') }}" alt="Mebit Logo" class="brand-image img-circle elevation-3">
+        <span class="brand-text font-weight-light">Mebit</span>
     </a>
 
     <div class="sidebar">
