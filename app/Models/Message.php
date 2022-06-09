@@ -22,7 +22,7 @@ class Message extends Model
     use HasFactory;
 
     public $table = 'messages';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -63,5 +63,8 @@ class Message extends Model
         'deleted_at' => 'nullable'
     ];
 
-    
+    public function client()
+    {
+        return $this->belongsTo(\App\Models\Client::class, 'client_stake_id', 'stake_id');
+    }
 }
