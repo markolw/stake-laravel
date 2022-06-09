@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+body {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Nunito', Arial;
+  color: #6c757d;
+}
+.login-page {
+  background-color: #fafdfb;
+}
+.login-logo {
+  margin: 20px 0 40px;
+}
+.login-logo img {
+  width: 120px;
+}
+.login-box .card {
+  border: none;
+  border-top: 2px solid #00AEEF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  background-color: #fff;
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.card .card-header {
+  border-bottom-color: #f9f9f9;
+  line-height: 30px;
+  -ms-grid-row-align: center;
+  align-self: center;
+  width: 100%;
+  min-height: 70px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+}
+.card .card-header h4 {
+  font-size: 16px;
+  line-height: 28px;
+  padding-right: 10px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.login-card-body {
+  padding-bottom: 40px;
+}
+.login-card-body .submit-button {
+  margin-top: 25px;
+}
+.simple-footer {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.input-label {
+  font-weight: 600;
+  color: #34395e;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+[class*="icheck-"] > label {
+  line-height: 18px;
+}
+[class*="icheck-"] > input:first-child + label::before {
+  background-color: #dee2e6;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+[class*="icheck-"] > input:first-child:not(:checked):not(:disabled):hover + label::before {
+  border-width: 1px;
+  border-color: #00AEEF;
+}
+.icheck-primary > input:first-child:checked + label::before {
+  background-color: #00AEEF;
+  border-color: #00AEEF;
+}
+[class*="icheck-"] > input:first-child:checked + label::after {
+  top: -2px;
+  left: -2px;
+}
+.btn-primary {
+  background-color: #00AEEF;
+  border-color: #00AEEF;
+}
+.btn-primary:hover {
+  background-color: #00a0da;
+  border-color: #00a0da;
+}
+.form-control {
+  background-color: #fdfdff;
+  border-color: #e4e6fc;
+  font-size: 14px;
+  padding: 10px 15px;
+  height: 42px;
+}
+.form-control:focus {
+  border-color: #00a0da;
+}
