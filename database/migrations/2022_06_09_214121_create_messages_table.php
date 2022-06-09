@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
             $table->string('client_stake_id');
-            $table->string('message');
-            $table->dateTime('stake_date');
+            $table->string('message')->nullable();
+            $table->dateTime('stake_date')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

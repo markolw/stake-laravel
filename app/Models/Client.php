@@ -22,7 +22,7 @@ class Client extends Model
     use HasFactory;
 
     public $table = 'clients';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -63,5 +63,8 @@ class Client extends Model
         'deleted_at' => 'nullable'
     ];
 
-    
+    public function messages()
+    {
+        return $this->hasMany(\App\Models\Message::class, 'client_stake_id', 'stake_id');
+    }
 }
