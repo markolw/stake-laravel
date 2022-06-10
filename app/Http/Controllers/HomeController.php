@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $messages = Message::with(['client'])->get()->toJson();
+        $messages = Message::with(['client'])->limit(10000)->orderBy('id', 'desc')->get()->toJson();
         $users = Client::all()->toJson();
 
         return view('home', compact('messages', 'users'));
